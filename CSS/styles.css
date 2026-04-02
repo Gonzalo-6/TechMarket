@@ -1,0 +1,119 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    background-color: #f5f6fa;
+}
+
+header {
+    background-color: #2f3640;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.filtro {
+    text-align: center;
+    margin: 20px;
+}
+
+#productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card button {
+    background-color: #0984e3;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.carrito-container, .formulario {
+    background: white;
+    margin: 20px;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+#carrito li {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+button {
+    cursor: pointer;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+}
+
+/* TABLET */
+@media (max-width: 768px) {
+    #productos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .carrito-container, .formulario {
+        margin: 10px;
+    }
+}
+
+/* MÓVIL */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 20px;
+    }
+
+    #productos {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    .card {
+        padding: 10px;
+    }
+
+    #carrito li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #carrito button {
+        margin-top: 5px;
+    }
+
+    input {
+        font-size: 14px;
+    }
+
+    button {
+        width: 100%;
+        margin-top: 5px;
+    }
+}

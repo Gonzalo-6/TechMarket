@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechMarket</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>TechMarket</h1>
+    </header>
+
+    <section class="filtro">
+        <select  id="filtro">
+            <option value="todos">Todos</option>
+            <option value="perifericos">Periféricos</option>
+            <option value="ordenadores">Ordenadores</option>
+            <option value="pantallas">Pantallas</option>
+        </select>
+    </section>
+
+    <section id="productos"></section>
+
+    <section class="carrito-container">
+        <h2>Carrito</h2>
+        <p>Productos: <span id="contador">0</span></p>
+        <ul id="carrito"> 
+        </ul>
+        <p>Total: <span id="total">0</span>€</p>
+        <button onclick="vaciarCarrito()">Vaciar Carrito</button>
+    </section>
+
+    <section class="formulario">
+    <h2>Compra</h2>
+    <form id="formulario">
+        <input type="text" id="nombre" placeholder="Nombre">
+        <span class="error" id="errorNombre"></span>
+
+        <input type="email" id="email" placeholder="Email">
+        <span class="error" id="errorEmail"></span>
+
+        <input type="password" id="password" placeholder="Contraseña">
+        <span class="error" id="errorPassword"></span>
+
+        <input type="password" id="confirmar" placeholder="Confirmar contraseña">
+        <span class="error" id="errorConfirmar"></span>
+
+        <button type="submit">Comprar</button>
+    </form>
+</section>
+    
+
+<script src="js/productos.js"></script>
+<script src="js/carrito.js"></script>
+<script src="js/filtro.js"></script>
+<script src="js/formulario.js"></script>
+<script src="js/main.js"></script>
+
+
+</body>
+</html>

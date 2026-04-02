@@ -26,3 +26,10 @@ document.getElementById("filtro").addEventListener("change", function () {
         mostrarProductos(filtrados);
     }
 });
+
+div.innerHTML = `
+    <img src="${p.imagen}" alt="${p.nombre}">
+    <h3>${p.nombre}</h3>
+    <p>${p.precio}€</p>
+    <button onclick="agregarAlCarrito(${p.id})">Añadir</button>
+`;
